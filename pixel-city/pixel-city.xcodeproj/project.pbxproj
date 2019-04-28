@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		753703A122758BD50023DAAB /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753703A022758BD50023DAAB /* DroppablePin.swift */; };
 		753703A322759BED0023DAAB /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753703A222759BED0023DAAB /* PhotoCell.swift */; };
+		753703A52275A1E40023DAAB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753703A42275A1E40023DAAB /* Constants.swift */; };
 		7576E6C822722C130057C22F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7576E6C722722C130057C22F /* AppDelegate.swift */; };
 		7576E6CA22722C130057C22F /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7576E6C922722C130057C22F /* MapVC.swift */; };
 		7576E6CD22722C130057C22F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7576E6CB22722C130057C22F /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		3859146977374084DCE08993 /* Pods-pixel-city.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixel-city.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city.debug.xcconfig"; sourceTree = "<group>"; };
 		753703A022758BD50023DAAB /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		753703A222759BED0023DAAB /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		753703A42275A1E40023DAAB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7576E6C422722C130057C22F /* pixel-city.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel-city.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7576E6C722722C130057C22F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7576E6C922722C130057C22F /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		7576E6DC22722C620057C22F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				753703A42275A1E40023DAAB /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753703A52275A1E40023DAAB /* Constants.swift in Sources */,
 				753703A322759BED0023DAAB /* PhotoCell.swift in Sources */,
 				7576E6CA22722C130057C22F /* MapVC.swift in Sources */,
 				753703A122758BD50023DAAB /* DroppablePin.swift in Sources */,
