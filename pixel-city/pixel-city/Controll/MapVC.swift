@@ -32,6 +32,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     
     var imageURLArray = [String]()
     var imageArray = [UIImage]()
+    var imageIDs = [String]()
     
     
     override func viewDidLoad() {
@@ -187,12 +188,14 @@ extension MapVC: MKMapViewDelegate {
             
             
             for photo in photosDictArray {
-                print(photo)
+               print(photo)
 //                let postUrl = "https://www.flickr.com/photos/\(photo["owner"]!)/\(photo["id"]!)/sizes/h/"
 //                let postUrl = "https://live.staticflickr.com/\(photo["server"]!)/\(photo["id"]!)_\(photo["secret"]!)_o_d.jpg"
                 
                 let postUrl = "https://live.staticflickr.com/\(photo["server"]!)/\(photo["id"]!)_\(photo["secret"]!)_m_d.jpg"
+                let imageTitle = "\(photo["id"]!)"
                 self.imageURLArray.append(postUrl)
+                self.imageIDs.append(imageTitle)
             }
             handler(true)
         }
@@ -260,7 +263,7 @@ extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else { return }
-        popVC.initData(forImage: imageArray[indexPath.row])
+        popVC.initData(forImage: imageArray[indexPath.row],forImageID: imageIDs[indexPath.row])
         present(popVC, animated: true, completion: nil)
     }
 }
@@ -269,7 +272,7 @@ extension MapVC: UIViewControllerPreviewingDelegate {
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         guard let indexPath = collectioView?.indexPathForItem(at: location), let cell = collectioView?.cellForItem(at: indexPath) else {return nil}
         guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else { return nil}
-        popVC.initData(forImage: imageArray[indexPath.row])
+        popVC.initData(forImage: imageArray[indexPath.row], forImageID: imageIDs[indexPath.row])
         
         previewingContext.sourceRect = cell.contentView.frame
         

@@ -125,18 +125,36 @@
                                     <constraint firstItem="fRR-FU-jSV" firstAttribute="centerY" secondItem="Jrl-nP-Vj8" secondAttribute="centerY" id="Nen-b2-Fmg"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQw-cf-Di9">
+                                <rect key="frame" x="20" y="28" width="73" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEb-xF-kAd">
+                                <rect key="frame" x="19.999999999999996" y="76.666666666666671" width="52.666666666666657" height="29"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="DEb-xF-kAd" firstAttribute="leading" secondItem="4FF-IA-iC1" secondAttribute="leadingMargin" id="5Sp-R2-c8g"/>
                             <constraint firstItem="Use-TA-fh7" firstAttribute="top" secondItem="Jrl-nP-Vj8" secondAttribute="bottom" constant="20" id="Ad2-aF-2f1"/>
+                            <constraint firstItem="ZQw-cf-Di9" firstAttribute="top" secondItem="b6f-Fd-CwX" secondAttribute="bottom" constant="8" id="FFC-G0-WW8"/>
                             <constraint firstAttribute="trailing" secondItem="MvN-6T-UE4" secondAttribute="trailing" id="N6G-cc-rFJ"/>
                             <constraint firstItem="Use-TA-fh7" firstAttribute="top" secondItem="MvN-6T-UE4" secondAttribute="bottom" id="Ozd-FC-x78"/>
                             <constraint firstItem="Jrl-nP-Vj8" firstAttribute="centerX" secondItem="4FF-IA-iC1" secondAttribute="centerX" id="ZWW-tV-v5m"/>
+                            <constraint firstItem="DEb-xF-kAd" firstAttribute="top" secondItem="ZQw-cf-Di9" secondAttribute="bottom" constant="8" id="pO2-3O-SJf"/>
+                            <constraint firstItem="ZQw-cf-Di9" firstAttribute="leading" secondItem="4FF-IA-iC1" secondAttribute="leadingMargin" id="sQE-xy-9Wf"/>
                             <constraint firstItem="MvN-6T-UE4" firstAttribute="leading" secondItem="4FF-IA-iC1" secondAttribute="leading" id="sVG-bs-zgl"/>
                             <constraint firstItem="MvN-6T-UE4" firstAttribute="top" secondItem="4FF-IA-iC1" secondAttribute="top" id="zOo-Nl-2zu"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageDescLbl" destination="DEb-xF-kAd" id="bke-cV-kuS"/>
+                        <outlet property="imageTitle" destination="ZQw-cf-Di9" id="2wO-OZ-BS0"/>
                         <outlet property="popImageView" destination="MvN-6T-UE4" id="Q29-Cg-TLk"/>
                     </connections>
                 </viewController>
