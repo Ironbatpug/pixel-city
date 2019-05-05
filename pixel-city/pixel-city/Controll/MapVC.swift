@@ -49,6 +49,8 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         
         collectioView?.backgroundColor = #colorLiteral(red: 0.9771530032, green: 0.7062081099, blue: 0.1748393774, alpha: 1)
         
+        registerForPreviewing(with: self, sourceView: collectioView!)
+        
         pullUpView.addSubview(collectioView!)
     }
     
@@ -262,6 +264,27 @@ extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource{
         present(popVC, animated: true, completion: nil)
     }
 }
+
+extension MapVC: UIViewControllerPreviewingDelegate {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = collectioView?.indexPathForItem(at: location), let cell = collectioView?.cellForItem(at: indexPath) else {return nil}
+        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else { return nil}
+        popVC.initData(forImage: imageArray[indexPath.row])
+        
+        previewingContext.sourceRect = cell.contentView.frame
+        
+        return popVC
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
+    }
+    
+    
+}
+
+
+
 
 
 
